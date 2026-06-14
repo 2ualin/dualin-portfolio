@@ -51,3 +51,19 @@ body{
 h2{
   font-size:42px;
 }
+
+.card{
+  margin-bottom:60px;
+
+  opacity:0;
+  transform:translateY(50px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.card.show{
+  opacity:1;
+  transform:translateY(0);
+}
