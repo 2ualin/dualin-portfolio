@@ -34,19 +34,49 @@ const bgObserver = new IntersectionObserver((entries) => {
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
 
-    canvas.width = 1;
-    canvas.height = 1;
+   canvas.width = img.naturalWidth;
+canvas.height = img.naturalHeight;
 
-    ctx.drawImage(img, 0, 0, 1, 1);
+ctx.drawImage(img, 0, 0);
 
-    const pixel = ctx.getImageData(0, 0, 1, 1).data;
+const pixels = ctx.getImageData(
+  0,
+  0,
+  canvas.width,
+  canvas.height
+).data;
 
-    const r = Math.floor(pixel[0] * 0.5);
-    const g = Math.floor(pixel[1] * 0.5);
-    const b = Math.floor(pixel[2] * 0.5);
+let r = 0;
+let g = 0;
+let b = 0;
+let count = 0;
 
-    document.body.style.backgroundColor =
-      `rgb(${r}, ${g}, ${b})`;
+for (let i = 0; i < pixels.length; i += 40) {
+
+  const pr = pixels[i];
+  const pg = pixels[i + 1];
+  const pb = pixels[i + 2];
+
+  // 거의 흰색은 제외
+  if (pr > 240 && pg > 240 && pb > 240) {
+    continue;
+  }
+
+  r += pr;
+  g += pg;
+  b += pb;
+
+  count++;
+}
+
+if (count > 0) {
+  r = Math.floor((r / count) * 0.5);
+  g = Math.floor((g / count) * 0.5);
+  b = Math.floor((b / count) * 0.5);
+
+  document.body.style.backgroundColor =
+    `rgb(${r}, ${g}, ${b})`;
+}
   });
 }, {
   threshold: 0.5
