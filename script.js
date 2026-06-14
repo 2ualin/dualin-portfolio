@@ -85,3 +85,20 @@ b = Math.floor((b / count) * 0.75);
 document.querySelectorAll(".card").forEach(card => {
   bgObserver.observe(card);
 });
+
+// dualin 구간에서는 검은 배경 복귀
+const hero = document.getElementById("hero");
+
+const heroObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+
+    if (entry.isIntersecting) {
+      document.body.style.backgroundColor = "#0a0a0a";
+    }
+
+  });
+}, {
+  threshold: 0.5
+});
+
+heroObserver.observe(hero);
