@@ -1,10 +1,10 @@
 body{
-  margin:0;
-  font-family:Arial;
-  background:#0a0a0a;
-  color:white;
+    margin:0;
+    font-family:Arial;
+    background:#0a0a0a;
+    color:white;
 
-  transition: background-color 1.5s ease;
+    transition: background-color 2s ease;
 }
 
 .hero{
