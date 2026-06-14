@@ -3,6 +3,8 @@ body{
   font-family:Arial;
   background:#0a0a0a;
   color:white;
+
+  transition: background-color 1.5s ease;
 }
 
 .hero{
