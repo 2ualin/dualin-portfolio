@@ -20,29 +20,6 @@ cards.forEach(card => {
 
 
 // =======================
-// dualin 타이핑 효과
-// =======================
-
-const text = "dualin";
-const typingElement = document.getElementById("typing");
-
-if (typingElement) {
-  let index = 0;
-
-  function typeEffect() {
-    if (index < text.length) {
-      typingElement.textContent += text.charAt(index);
-      index++;
-
-      setTimeout(typeEffect, 200);
-    }
-  }
-
-  typeEffect();
-}
-
-
-// =======================
 // Hero 구간 검은 배경 복귀
 // =======================
 
