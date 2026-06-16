@@ -49,12 +49,12 @@ body{
 
 .card h3{
   margin-top:20px;
-  text-align:center;
+  text-align:left;
 }
 
 .card p{
   color:#aaa;
-  text-align:center;
+  text-align:left;
 }
 
 h2{
