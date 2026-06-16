@@ -101,7 +101,11 @@ const heroObserver = new IntersectionObserver((entries) => {
   threshold: 0.5
 });
 
-const chapter = document.querySelector(".chapter-title");
+const chapters = document.querySelectorAll(".chapter-title");
+
+chapters.forEach(chapter=>{
+    observer.observe(chapter);
+});
 
 const chapterObserver = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
@@ -115,7 +119,7 @@ const chapterObserver = new IntersectionObserver((entries)=>{
   threshold:0.4
 });
 
-chapterObserver.observe(chapter);
+
 
 // ======================
 // The Great Houses 배경 전환
