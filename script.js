@@ -127,7 +127,7 @@ const chapterBgObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
 
     if (entry.isIntersecting) {
-      document.body.style.backgroundColor = "#243447";
+      document.body.style.backgroundColor = "#dae6f5";
     }
 
   });
