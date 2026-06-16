@@ -122,21 +122,31 @@ const chapterObserver = new IntersectionObserver((entries)=>{
 
 
 // ======================
-// The Great Houses 배경 전환
+// title 배경 전환
 // ======================
 
-const chapterTitle = document.querySelector(".chapter-title");
+const chapters = document.querySelectorAll(".chapter-title");
 
-const chapterBgObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
+chapters.forEach(chapter => {
 
-    if (entry.isIntersecting) {
-      document.body.style.backgroundColor = "#dae6f5";
-    }
+  const bg = chapter.dataset.bg;
 
+  const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+        document.body.style.backgroundColor = bg;
+      }
+
+    });
+
+  }, {
+    threshold: 0.5
   });
-}, {
-  threshold: 0.5
+
+  observer.observe(chapter);
+
 });
 
 chapterBgObserver.observe(chapterTitle);
