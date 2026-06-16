@@ -101,4 +101,20 @@ const heroObserver = new IntersectionObserver((entries) => {
   threshold: 0.5
 });
 
+const chapter = document.querySelector(".chapter-title");
+
+const chapterObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+
+  });
+},{
+  threshold:0.4
+});
+
+chapterObserver.observe(chapter);
+
 heroObserver.observe(hero);
