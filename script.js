@@ -125,13 +125,11 @@ const chapterObserver = new IntersectionObserver((entries)=>{
 // title 배경 전환
 // ======================
 
-const chapters = document.querySelectorAll(".chapter-title");
-
-chapters.forEach(chapter => {
+document.querySelectorAll(".chapter-title").forEach(chapter => {
 
   const bg = chapter.dataset.bg;
 
-  const observer = new IntersectionObserver((entries) => {
+  const bgObserver = new IntersectionObserver((entries) => {
 
     entries.forEach(entry => {
 
@@ -145,10 +143,11 @@ chapters.forEach(chapter => {
     threshold: 0.5
   });
 
-  observer.observe(chapter);
+  bgObserver.observe(chapter);
 
 });
 
-chapterBgObserver.observe(chapterTitle);
-
-heroObserver.observe(hero);
+// 챕터 등장 효과
+document.querySelectorAll(".chapter-title").forEach(chapter=>{
+    observer.observe(chapter);
+});
