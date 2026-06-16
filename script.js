@@ -151,4 +151,3 @@ document.querySelectorAll(".chapter-title").forEach(chapter=>{
     observer.observe(chapter);
 });
 
-heroObserver.observe(hero);
