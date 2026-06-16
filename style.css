@@ -38,8 +38,13 @@ body{
 }
 
 .card img{
-  width:100%;
-  border-radius:12px;
+    width:85%;
+    max-width:1000px;
+
+    display:block;
+    margin:0 auto;
+
+    border-radius:12px;
 }
 
 .card h3{
