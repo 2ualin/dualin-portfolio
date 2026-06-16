@@ -1,6 +1,5 @@
 const cards = document.querySelectorAll(".card");
 
-const observer = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){
       entry.target.classList.add("show");
@@ -151,3 +150,5 @@ document.querySelectorAll(".chapter-title").forEach(chapter => {
 document.querySelectorAll(".chapter-title").forEach(chapter=>{
     observer.observe(chapter);
 });
+
+heroObserver.observe(hero);
