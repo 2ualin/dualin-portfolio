@@ -117,4 +117,24 @@ const chapterObserver = new IntersectionObserver((entries)=>{
 
 chapterObserver.observe(chapter);
 
+// ======================
+// The Great Houses 배경 전환
+// ======================
+
+const chapterTitle = document.querySelector(".chapter-title");
+
+const chapterBgObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+
+    if (entry.isIntersecting) {
+      document.body.style.backgroundColor = "#243447";
+    }
+
+  });
+}, {
+  threshold: 0.5
+});
+
+chapterBgObserver.observe(chapterTitle);
+
 heroObserver.observe(hero);
