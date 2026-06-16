@@ -38,21 +38,16 @@ body{
 }
 
 .card img{
-    width:85%;
-    max-width:1000px;
-
-    display:block;
-    margin:0 auto;
-
-    border-radius:12px;
+  width:100%;
+  border-radius:12px;
 }
 
-.card h3,
+.card h3{
+  margin-top:20px;
+}
+
 .card p{
-    width:80%;
-    max-width:950px;
-    margin:0 auto;
-    text-align:left;
+  color:#aaa;
 }
 
 h2{
@@ -104,38 +99,4 @@ h2{
     opacity:1;
     transform:translateY(0);
   }
-}
-
-.chapter-title{
-  min-height:50vh;
-
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-
-  opacity:0;
-  transform:translateY(40px);
-
-  transition:all 1.2s ease;
-}
-
-.chapter-title.show{
-  opacity:1;
-  transform:translateY(0);
-}
-
-.chapter-title h2{
-  font-size:72px;
-  margin:0;
-}
-
-.chapter-title p{
-  color:#b7c8d8;
-  margin-top:20px;
-  font-size:18px;
-  letter-spacing:3px;
-}
-
-.portfolio{
-  background:#253547;
 }
