@@ -188,3 +188,8 @@ const activeObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll(".card").forEach(card => {
   activeObserver.observe(card);
 });
+// ======================
+// Hero 구간 검은 배경 복귀
+// ======================
+
+heroObserver.observe(hero);
