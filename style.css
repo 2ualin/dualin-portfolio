@@ -141,4 +141,20 @@ h2{
 .card.active{
   opacity:1;
 }
+/* ======================
+   부드러운 스크롤 스냅
+   카드 근처에서 스크롤을 멈추면
+   화면 중앙으로 살짝 정렬
+   ====================== */
+
+html{
+  scroll-behavior:smooth;
+  scroll-snap-type:y proximity;
+}
+
+/* 카드가 화면 중앙에 오도록 정렬 */
+
+.card{
+  scroll-snap-align:center;
+}
 
