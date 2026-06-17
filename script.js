@@ -151,3 +151,27 @@ document.querySelectorAll(".chapter-title").forEach(chapter => {
 document.querySelectorAll(".chapter-title").forEach(chapter=>{
     observer.observe(chapter);
 });
+
+// ======================
+// 현재 카드 강조 효과
+// ======================
+
+const activeObserver = new IntersectionObserver((entries) => {
+
+  entries.forEach(entry => {
+
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+    } else {
+      entry.target.classList.remove("active");
+    }
+
+  });
+
+}, {
+  threshold: 0.6
+});
+
+document.querySelectorAll(".card").forEach(card => {
+  activeObserver.observe(card);
+});
