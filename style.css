@@ -2,8 +2,8 @@ body{
     margin:0;
     font-family:Arial;
     background:#0a0a0a;
-    color:white;
-
+    color:#f4eade;
+    
     transition: background-color 2s ease;
 }
 
