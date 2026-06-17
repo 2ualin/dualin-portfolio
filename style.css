@@ -57,10 +57,12 @@ body{
 
 .card h3{
   margin-top:20px;
+  margin-bottom:6px;
 }
 
 .card p{
   color:#aaa;
+     margin-top:0;
 }
 
 h2{
