@@ -141,18 +141,3 @@ h2{
 .card.active{
   opacity:1;
 }
-
-/* ======================
-   강한 스크롤 스냅
-   카드 시작 위치에 맞춰 정렬
-   ====================== */
-
-html{
-  scroll-behavior:smooth;
-  scroll-snap-type:y mandatory;
-}
-
-.card{
-  scroll-snap-align:start;
-}
-
