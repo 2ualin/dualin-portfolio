@@ -60,10 +60,16 @@ for (let i = 0; i < pixels.length; i += 40) {
   const pg = pixels[i + 1];
   const pb = pixels[i + 2];
 
-  // 거의 흰색은 제외
-  if (pr > 240 && pg > 240 && pb > 240) {
-    continue;
-  }
+// ======================
+// 명도 20% 이하 색상 제외
+// 너무 어두운 영역은 평균색 계산에서 제외
+// ======================
+
+const brightness = (pr + pg + pb) / 3;
+
+if (brightness > 220) {
+  continue;
+}
 
   r += pr;
   g += pg;
