@@ -70,9 +70,9 @@ for (let i = 0; i < pixels.length; i += 40) {
 }
 
 if (count > 0) {
- r = Math.floor((r / count) * 0.75);
-g = Math.floor((g / count) * 0.75);
-b = Math.floor((b / count) * 0.75);
+ r = Math.floor((r / count) * 0.65);
+g = Math.floor((g / count) * 0.65);
+b = Math.floor((b / count) * 0.65);
 
   document.body.style.backgroundColor =
     `rgb(${r}, ${g}, ${b})`;
