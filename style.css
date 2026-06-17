@@ -118,3 +118,21 @@ h2{
     transform:translateY(0);
   }
 }
+
+/* ======================
+   현재 카드 강조 효과
+   ====================== */
+
+.card{
+  opacity:0.4;
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+/* 화면 중앙에 들어온 카드 */
+
+.card.active{
+  opacity:1;
+}
