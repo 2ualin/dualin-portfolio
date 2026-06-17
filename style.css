@@ -33,7 +33,14 @@ body{
 
   margin:120px auto 160px auto;
 }
+.chapter-title h2{
+  margin:0;
+}
 
+.chapter-title p{
+  margin-top:8px;
+  color:#888;
+}
 .hero p{
   color:#999;
 }
