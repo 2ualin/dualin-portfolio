@@ -61,13 +61,17 @@ for (let i = 0; i < pixels.length; i += 40) {
   const pb = pixels[i + 2];
 
 // ======================
-// 명도 20% 이하 색상 제외
-// 너무 어두운 영역은 평균색 계산에서 제외
+// 채도 계산
+// 채도 낮은 색은 제외
 // ======================
 
-const brightness = (pr + pg + pb) / 3;
+const max = Math.max(pr, pg, pb);
+const min = Math.min(pr, pg, pb);
 
-if (brightness > 220) {
+const saturation = max - min;
+
+// 채도 낮은 색 제외
+if (saturation < 40) {
   continue;
 }
 
@@ -79,9 +83,9 @@ if (brightness > 220) {
 }
 
 if (count > 0) {
- r = Math.floor((r / count) * 0.65);
-g = Math.floor((g / count) * 0.65);
-b = Math.floor((b / count) * 0.65);
+ r = Math.floor((r / count) * 0.72);
+g = Math.floor((g / count) * 0.72);
+b = Math.floor((b / count) * 0.72);
 
   document.body.style.backgroundColor =
     `rgb(${r}, ${g}, ${b})`;
