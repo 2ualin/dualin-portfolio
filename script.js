@@ -182,7 +182,7 @@ const activeObserver = new IntersectionObserver((entries) => {
   });
 
 }, {
-  threshold: 0.6
+  threshold: 0.3
 });
 
 document.querySelectorAll(".card").forEach(card => {
