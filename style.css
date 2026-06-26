@@ -141,3 +141,13 @@ h2{
 .card.active{
   opacity:1;
 }
+
+/* ======================
+   YouTube 영상
+   ====================== */
+iframe{
+  width:100%;
+  height:700px;
+  border:none;
+  border-radius:12px;
+}
