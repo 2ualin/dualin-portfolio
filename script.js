@@ -1,5 +1,25 @@
 const cards = document.querySelectorAll(".card");
 
+// ======================
+// Hero 이름 등장 효과
+// ======================
+
+const heroName = document.querySelector(".hero-name");
+
+const heroNameObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+},{
+  threshold:0.3
+});
+
+if(heroName){
+  heroNameObserver.observe(heroName);
+}
+
 // 카드 & 챕터 스르륵 등장 효과
 const observer = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
