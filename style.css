@@ -7,31 +7,6 @@ body{
     transition: background-color 2s ease;
 }
 
-/* ======================
-   Portfolio 첫 화면
-   ====================== */
-
-.portfolio-title{
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  margin:0;
-}
-
-/* 남해균 */
-.portfolio-title p{
-  font-size:18px;
-  color:#d9a800;
-  margin:0 0 6px 0;
-}
-
-/* PORTFOLIO */
-.portfolio-title h2{
-  font-size:110px;
-  margin:0;
-}
 
 .hero{
   height:100vh;
