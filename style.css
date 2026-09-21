@@ -7,27 +7,6 @@ body{
     transition: background-color 2s ease;
 }
 
-/* ======================
-   Portfolio Hero Title
-   ====================== */
-
-.hero-name{
-  color:#d9a800;
-  font-size:20px;
-  font-weight:700;
-  margin-bottom:4px;
-}
-
-.portfolio-title{
-  color:#f4eade;
-  font-family:Arial, sans-serif;
-  font-size:110px;
-  font-weight:900;
-  line-height:0.9;
-  letter-spacing:-4px;
-  margin:0;
-}
-
 .hero{
   height:100vh;
   display:flex;
