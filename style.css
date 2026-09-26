@@ -8,6 +8,7 @@ body{
 }
 
 .hero-name{
+   align-self:flex-start;
   color:#d9a800;
 }
 
