@@ -10,6 +10,11 @@ body{
 .hero-name{
   text-align:left;
   color:#d9a800;
+     /* PORTFOLIO와 동일한 등장 효과 */
+  opacity:0;
+  transform:translateY(30px);
+
+  animation:fadeUp 1.5s ease forwards;
 }
 
 .hero-content{
