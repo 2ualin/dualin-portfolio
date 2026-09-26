@@ -8,8 +8,12 @@ body{
 }
 
 .hero-name{
-   align-self:flex-start;
+  text-align:left;
   color:#d9a800;
+}
+
+.hero-content{
+  width:fit-content;
 }
 
 .hero{
@@ -21,9 +25,9 @@ body{
   text-align:center;
 }
 
-.hero h1{
-  font-size:80px;
+.hero-content h1{
   margin:0;
+  text-align:left;
 }
 
 .chapter-title{
