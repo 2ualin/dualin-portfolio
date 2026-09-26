@@ -1,45 +1,82 @@
+/* ======================
+   기본 설정
+   ====================== */
+
 body{
-    margin:0;
-    font-family:Arial;
-    background:#0a0a0a;
-    color:#f4eade;
-    
-    transition: background-color 2s ease;
+  margin:0;
+  font-family:Arial;
+  background:#0a0a0a;
+  color:#f4eade;
+
+  transition:background-color 2s ease;
 }
 
+
+/* ======================
+   Hero
+   ====================== */
+
+.hero{
+  height:100vh;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+}
+
+/* Hero 전체 콘텐츠 */
+.hero-content{
+  width:fit-content;
+}
+
+/* Nam HaeKyun */
 .hero-name{
   text-align:left;
   color:#d9a800;
-     /* PORTFOLIO와 동일한 등장 효과 */
+
   opacity:0;
   transform:translateY(30px);
 
   animation:fadeUp 1.2s ease forwards;
 }
 
-.hero-content{
-  width:fit-content;
-}
-
-.hero{
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-}
-
+/* PORTFOLIO */
 .hero-content h1{
+  font-size:80px;
   margin:0;
   text-align:left;
 
-    opacity:0;
+  opacity:0;
   transform:translateY(30px);
 
   animation:fadeUp 1.5s ease forwards;
   animation-delay:0.3s;
 }
+
+
+/* ======================
+   Hero 등장 애니메이션
+   ====================== */
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+/* ======================
+   Chapter Title
+   ====================== */
 
 .chapter-title{
   text-align:center;
@@ -53,6 +90,7 @@ body{
 
   margin:120px auto 160px auto;
 }
+
 .chapter-title h2{
   margin:0;
 }
@@ -61,9 +99,11 @@ body{
   margin-top:8px;
   color:#bababa;
 }
-.hero p{
-  color:#999;
-}
+
+
+/* ======================
+   Portfolio / About / Contact
+   ====================== */
 
 .portfolio,
 .about,
@@ -73,8 +113,29 @@ body{
   padding:80px 20px;
 }
 
+
+/* ======================
+   공통 제목
+   ====================== */
+
+h2{
+  font-size:42px;
+}
+
+
+/* ======================
+   Card
+   ====================== */
+
 .card{
   margin-bottom:60px;
+
+  opacity:0;
+  transform:translateY(50px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 .card img{
@@ -89,62 +150,18 @@ body{
 
 .card p{
   color:#aaa;
-     margin-top:0;
+  margin-top:0;
 }
 
-h2{
-  font-size:42px;
-}
 
-.card{
-  margin-bottom:60px;
-
-  opacity:0;
-  transform:translateY(50px);
-
-  transition:
-    opacity 0.8s ease,
-    transform 0.8s ease;
-}
-
+/* 카드 / 챕터 등장 */
 
 .card.show,
 .chapter-title.show{
-    opacity:1;
-    transform:translateY(0);
+  opacity:1;
+  transform:translateY(0);
 }
 
-.hero h1{
-  font-size:80px;
-  margin:0;
-
-  opacity:0;
-  transform:translateY(30px);
-
-  animation:fadeUp 1.5s ease forwards;
-}
-
-.hero p{
-  color:#999;
-
-  opacity:0;
-  transform:translateY(30px);
-
-  animation:fadeUp 1.5s ease forwards;
-  animation-delay:0.5s;
-}
-
-@keyframes fadeUp{
-  from{
-    opacity:0;
-    transform:translateY(30px);
-  }
-
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
 
 /* ======================
    현재 카드 흐리게 처리
@@ -154,6 +171,7 @@ h2{
   opacity:0.4;
 }
 
+
 /* ======================
    현재 보는 카드 강조
    ====================== */
@@ -162,9 +180,11 @@ h2{
   opacity:1;
 }
 
+
 /* ======================
    YouTube 영상
    ====================== */
+
 iframe{
   width:100%;
   height:700px;
