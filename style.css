@@ -7,6 +7,9 @@ body{
     transition: background-color 2s ease;
 }
 
+.hero-name{
+  color:#d9a800;
+}
 
 .hero{
   height:100vh;
